@@ -418,7 +418,15 @@ export const OutlineButtonStyles = css`
       :host([appearance='outline']) {
         border-color: ${SystemColors.ButtonText};
       }
+      :host([appearance="outline"]) .control:${focusVisible} {
+        box-shadow: 0 0 0 calc((var(--focus-outline-width) - var(--outline-width)) * 1px) ${SystemColors.ButtonText};
+        border-color: ${SystemColors.ButtonText};
+      }
       :host([appearance='outline'][href]) {
+        border-color: ${SystemColors.LinkText};
+      }
+      :host([appearance="outline"][href]) .control:${focusVisible} {
+        box-shadow: 0 0 0 calc((var(--focus-outline-width) - var(--outline-width)) * 1px) ${SystemColors.LinkText};
         border-color: ${SystemColors.LinkText};
       }
     `,

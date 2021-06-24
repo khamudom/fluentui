@@ -67,145 +67,145 @@ export const NumberFieldFilledStyles = css`
 );
 
 export const NumberFieldStyles = css`
-    ${display('inline-block')} :host {
-        font-family: var(--body-font);
-        outline: none;
-        user-select: none;
-        position: relative;
-    }
+  ${display('inline-block')} :host {
+    font-family: var(--body-font);
+    outline: none;
+    user-select: none;
+    position: relative;
+  }
 
-    .root {
-        box-sizing: border-box;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        color: ${neutralForegroundRestBehavior.var};
-        background: ${neutralFillInputRestBehavior.var};
-        border-radius: calc(var(--corner-radius) * 1px);
-        border: calc(var(--outline-width) * 1px) solid ${neutralOutlineRestBehavior.var};
-        height: calc(${heightNumber} * 1px);
-    }
+  .root {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: ${neutralForegroundRestBehavior.var};
+    background: ${neutralFillInputRestBehavior.var};
+    border-radius: calc(var(--corner-radius) * 1px);
+    border: calc(var(--outline-width) * 1px) solid ${neutralOutlineRestBehavior.var};
+    height: calc(${heightNumber} * 1px);
+  }
 
-    .control {
-        -webkit-appearance: none;
-        font: inherit;
-        background: transparent;
-        border: 0;
-        color: inherit;
-        height: calc(100% - 4px);
-        width: 100%;
-        margin-top: auto;
-        margin-bottom: auto;
-        border: none;
-        padding: 0 calc(var(--design-unit) * 2px + 1px);
-        font-size: var(--type-ramp-base-font-size);
-        line-height: var(--type-ramp-base-line-height);
-    }
+  .control {
+    -webkit-appearance: none;
+    font: inherit;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    height: calc(100% - 4px);
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    padding: 0 calc(var(--design-unit) * 2px + 1px);
+    font-size: var(--type-ramp-base-font-size);
+    line-height: var(--type-ramp-base-line-height);
+  }
 
-    .control:hover,
+  .control:hover,
     .control:${focusVisible},
     .control:disabled,
     .control:active {
-        outline: none;
-    }
+    outline: none;
+  }
 
-    .controls {
-        opacity: 0;
-    }
+  .controls {
+    opacity: 0;
+  }
 
-    .label {
-        display: block;
-        color: ${neutralForegroundRestBehavior.var};
-        cursor: pointer;
-        font-size: var(--type-ramp-base-font-size);
-        line-height: var(--type-ramp-base-line-height);
-        margin-bottom: 4px;
-    }
+  .label {
+    display: block;
+    color: ${neutralForegroundRestBehavior.var};
+    cursor: pointer;
+    font-size: var(--type-ramp-base-font-size);
+    line-height: var(--type-ramp-base-line-height);
+    margin-bottom: 4px;
+  }
 
-    .label__hidden {
-        display: none;
-        visibility: hidden;
-    }
+  .label__hidden {
+    display: none;
+    visibility: hidden;
+  }
 
-    .start,
-    .end {
-        margin: auto;
-        fill: currentcolor;
-    }
+  .start,
+  .end {
+    margin: auto;
+    fill: currentcolor;
+  }
 
-    .step-up,
-    .step-down {
-        padding: 2px 10px;
-        cursor: pointer;
-    }
+  .step-up,
+  .step-down {
+    padding: 2px 10px;
+    cursor: pointer;
+  }
 
-    .step-up:before,
-    .step-down:before {
-        content: '';
-        display: block;
-        border: solid transparent 6px;
-    }
+  .step-up:before,
+  .step-down:before {
+    content: '';
+    display: block;
+    border: solid transparent 6px;
+  }
 
-    .step-up:before {
-        border-bottom-color: ${neutralForegroundRestBehavior.var};
-    }
+  .step-up:before {
+    border-bottom-color: ${neutralForegroundRestBehavior.var};
+  }
 
-    .step-down:before {
-        border-top-color: ${neutralForegroundRestBehavior.var};
-    }
+  .step-down:before {
+    border-top-color: ${neutralForegroundRestBehavior.var};
+  }
 
-    ::slotted(svg) {
-        ${
-          /* Glyph size and margin-left is temporary -
+  ::slotted(svg) {
+    ${
+      /* Glyph size and margin-left is temporary -
             replace when adaptive typography is figured out */ ''
-        } width: 16px;
-        height: 16px;
-    }
+    } width: 16px;
+    height: 16px;
+  }
 
-    .start {
-        display: flex;
-        margin-inline-start: 11px;
-    }
+  .start {
+    display: flex;
+    margin-inline-start: 11px;
+  }
 
-    .end {
-        display: flex;
-        margin-inline-end: 11px;
-    }
+  .end {
+    display: flex;
+    margin-inline-end: 11px;
+  }
 
-    :host(:hover:not([disabled])) .root {
-        background: ${neutralFillInputHoverBehavior.var};
-        border-color: ${neutralOutlineHoverBehavior.var};
-    }
+  :host(:hover:not([disabled])) .root {
+    background: ${neutralFillInputHoverBehavior.var};
+    border-color: ${neutralOutlineHoverBehavior.var};
+  }
 
-    :host(:active:not([disabled])) .root {
-        background: ${neutralFillInputHoverBehavior.var};
-        border-color: ${neutralOutlineActiveBehavior.var};
-    }
+  :host(:active:not([disabled])) .root {
+    background: ${neutralFillInputHoverBehavior.var};
+    border-color: ${neutralOutlineActiveBehavior.var};
+  }
 
-    :host(:focus-within:not([disabled])) .root {
-        border-color: ${neutralFocusBehavior.var};
-        box-shadow: 0 0 0 1px ${neutralFocusBehavior.var} inset;
-    }
+  :host(:focus-within:not([disabled])) .root {
+    border-color: ${neutralFocusBehavior.var};
+    box-shadow: 0 0 0 1px ${neutralFocusBehavior.var} inset;
+  }
 
-    :host(:hover:not([disabled])) .controls,
-    :host(:focus-within:not([disabled])) .controls {
-        opacity: 1;
-    }
+  :host(:hover:not([disabled])) .controls,
+  :host(:focus-within:not([disabled])) .controls {
+    opacity: 1;
+  }
 
-    :host([disabled]) .label,
-    :host([readonly]) .label,
-    :host([readonly]) .control,
-    :host([disabled]) .control {
-        cursor: ${disabledCursor};
-    }
+  :host([disabled]) .label,
+  :host([readonly]) .label,
+  :host([readonly]) .control,
+  :host([disabled]) .control {
+    cursor: ${disabledCursor};
+  }
 
-    :host([disabled]) {
-        opacity: var(--disabled-opacity);
-    }
+  :host([disabled]) {
+    opacity: var(--disabled-opacity);
+  }
 
-    :host([disabled]) .control {
-        border-color: ${neutralOutlineRestBehavior.var};
-    }
+  :host([disabled]) .control {
+    border-color: ${neutralOutlineRestBehavior.var};
+  }
 `.withBehaviors(
   appearanceBehavior('filled', NumberFieldFilledStyles),
   neutralFillHoverBehavior,
@@ -232,10 +232,12 @@ export const NumberFieldStyles = css`
         border-color: ${SystemColors.Highlight};
         box-shadow: 0 0 0 1px ${SystemColors.Highlight} inset;
       }
-      .control,
+      .control {
+        color: ${SystemColors.FieldText};
+      }
       ::placeholder,
       ::-webkit-input-placeholder {
-        color: ${SystemColors.FieldText};
+        color: ${SystemColors.GrayText};
       }
       .step-up:before {
         border-bottom-color: ${SystemColors.FieldText};

@@ -109,14 +109,18 @@ export const BreadcrumbItemStyles = css`
   forcedColorsStylesheetBehavior(
     css`
       :host(:not([href])) {
-          color: ${SystemColors.ButtonText};
-          fill: currentcolor;
+        color: ${SystemColors.ButtonText};
+        fill: currentcolor;
       }
       .control:hover .content::before,
       .control:${focusVisible} .content::before {
         background: ${SystemColors.LinkText};
       }
       .separator {
+        fill: ${SystemColors.ButtonText};
+      }
+      .start,
+      .end {
         fill: ${SystemColors.ButtonText};
       }
     `,
